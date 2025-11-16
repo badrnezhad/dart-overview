@@ -38,7 +38,15 @@ void main() {
 
   print(doubled.where((n) => n >= 10));
 
-  print(numbers.any((n)=> n >= 10));
+  print(numbers.any((n) => n >= 10));
 
+  var list1 = [1, 2, 3];
+  var list2 = [4, 5, 6];
+  var list3 = [...?list1, ...list2];
+  print(list3);
 
+  var map1 = {"a": 1, "b": 2};
+  var map2 = {"c": 3};
+  var map3 = {...map1, ...map2};
+  print(map3);
 }
