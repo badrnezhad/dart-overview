@@ -1,6 +1,7 @@
 import 'Car.dart';
 import 'Person.dart';
 import 'Rectangle.dart';
+import 'StringExtension.dart';
 
 void main() {
   var hossein = Person(name: "Hossein", age: 31);
@@ -18,4 +19,8 @@ void main() {
   var bmw = Car("BMW", "E46");
   bmw.start();
   bmw.drive();
+
+  String name = "hossein";
+  print(name);
+  print(name.capitalize());
 }
