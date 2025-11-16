@@ -28,5 +28,17 @@ void main() {
 
   print(user["name"]);
   user["city"] = "Tehran";
-  
+
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  //numbers.forEach((n) => print(n));
+  var doubled = numbers.map((n) => n * 2);
+  print(numbers);
+  print(doubled);
+
+  print(doubled.where((n) => n >= 10));
+
+  print(numbers.any((n)=> n >= 10));
+
+
 }
