@@ -1,63 +1,36 @@
+void greet(String name) {
+  print("hello, $name");
+}
+
+// int sum(int a, int b) {
+//   return a + b;
+// }
+
+int sum(int x, int y) => x + y;
+
+void showMessage2(String msg, int age, [String sender = "System"]) {
+  print("from $sender : $msg");
+}
+
+
+void showMessage({String msg = "", int age = 0, String sender = "System"}) {
+  print("from $sender : $msg");
+}
+
 void main() {
-  int age = 18;
+  greet("Hossein");
+  var result = sum(2, 3);
+  print("2+3=$result");
+  showMessage(msg: "Welcome", age: 20);
+  showMessage(msg: "Welcome", age: 25, sender: "User");
 
-  if (age >= 18) {
-    print("Adult");
-  } else {
-    print("Young");
-  }
+  var add = sum;
+  result = add(5, 6);
+  print("5+6=$result");
 
-  int score = 85;
-  if (score >= 90) {
-    print("A");
-  } else if (score >= 80) {
-    print("B");
-  } else {
-    print("C");
-  }
-
-  var isLoggedIn = false;
-  var message = isLoggedIn ? "Welcome" : "Please Login";
-  print(message);
-
-  for (var i = 0; i < 5; i++) {
-    print(i);
-  }
-
-  var cars = ["BMW", "Benz", "VW"];
-  for (var car in cars) {
-    print(car);
-  }
-
-  int count = 0;
-  while (count < 3) {
-    print(count);
-    count++;
-  }
-
-  int num = 0;
-  do {
-    if (num == 5) {
-      break;
-    }
-    if (num == 1) {
-      num++;
-      continue;
-    }
-    print("number: $num");
-    num++;
-  } while (num < 10);
-
-  var command = "open";
-
-  switch (command) {
-    case "open":
-      print("Openning File...");
-      break;
-    case "close":
-      print("Closing File...");
-      break;
-    default:
-      print("unknown command");
-  }
+  var lst = [1, 2, 3];
+  lst.forEach((item) {
+    print(item);
+  });
+  lst.forEach((item) => print(item));
 }
