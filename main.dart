@@ -15,7 +15,6 @@ void main() {
   rect.resize = 2;
   print(rect.area);
 
-
   var bmw = Car("BMW", "E46");
   bmw.start();
   bmw.drive();
