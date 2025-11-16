@@ -1,4 +1,6 @@
-class Person {
+import 'LoggerMixin.dart';
+
+class Person with Logger {
   String name;
   int age;
 
@@ -8,6 +10,7 @@ class Person {
 
   void sayHello() {
     print("Hi, I'm $name and I'm $age years old.");
+    log("sayHello called");
   }
 
   String get info => "$name ($age yo)";
