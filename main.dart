@@ -1,3 +1,4 @@
+import 'Car.dart';
 import 'Person.dart';
 import 'Rectangle.dart';
 
@@ -15,4 +16,7 @@ void main() {
   print(rect.area);
 
 
+  var bmw = Car("BMW", "E46");
+  bmw.start();
+  bmw.drive();
 }
